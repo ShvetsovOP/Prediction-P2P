@@ -1,0 +1,36 @@
+P2P Betting Platform — Audit Archive Manifest
+Generated for external technical audit
+
+Archive files:
+- p2p-audit-src.tar.gz
+- p2p-audit-src.zip (same content, Windows-friendly)
+
+Root path in archive:
+Project3_Business_Predict/
+
+Excluded from archive:
+- node_modules/
+- .next/, dist/
+- .pnpm-store/
+- *.tsbuildinfo
+- apps/mobile/build/, apps/mobile/.dart_tool/
+- services/indexer/bin/
+- .env, .env.*
+- archive files themselves
+
+Project stage:
+P0-001 monorepo scaffold (no wallet/auth/matching implementation yet)
+
+Stack:
+pnpm workspaces, NestJS API, Next.js web/admin, Flutter mobile, Go indexer stub
+
+Audit focus suggestions:
+1. Monorepo structure and package boundaries
+2. CI/CD (.github/workflows/ci.yml)
+3. Dependency supply chain (pnpm-lock.yaml)
+4. Security baseline (eslint, golangci, scripts)
+5. Readiness for fintech/betting domain expansion
+
+Contact context to provide auditor:
+- Planned: custodial USDT/USDC, P2P matching, Binance oracle
+- Docs: docs/project/IMPLEMENTATION_PLAN.md
